@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamel Clodin - Shirt Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="flex flex-col h-screen m-0">
+    <!-- Navbar -->
+    <nav class="bg-black p-4">
+        <div class="container mx-auto flex items-center justify-between relative">
+            <a href="/" class="flex items-center text-white space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </a>
+            <div class="absolute left-1/2 transform -translate-x-1/2 text-yellow-200 text-xl font-bold">
+                Gamel Clodin
+            </div>
+            <button class="bg-white text-black border border-black rounded px-3 py-1">
+                Save
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex justify-center items-center flex-col w-full mt-8">
+        <!-- Shirt SVG Display -->
+        <div id="tshirt-div" class="relative overflow-hidden w-80 h-96">
+            <svg id="shirt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" class="w-full h-full">
+                <defs></defs>
+                <path id="left-chest" d="M349.91,145.03V989.55s-47.43-4.49-59.4-5.02c-7.25-.33-36-.88-59.08-4.53-15.05-2.38-26.82-7.3-31.64-10.11-12.21-7.12-36.92-39.84-36.92-39.84,0,0-18.55-21.8-21.33-31.64-2.78-9.84,.27-43.45,.27-43.45l18.31-158.41v-41.21l-2.75-139.19-7.32-140.62s-2.35-26.19-6.86-56.45c-5.5-36.92-13.48-80.07-15.3-91.25-2.97-18.31-11.69-38.64-20.12-55.05l174.05-74.64c2.64,8.18,5.74,17.08,9.23,25.96,12.37,31.47,30.03,61.01,30.03,61.01l28.83-40.08Z" style="fill:none; stroke:#a6a6a6; stroke-miterlimit:10; stroke-width:1.5px;"/>
+                <path id="right-chest" d="M393.02,145.44V989.96s47.43-4.49,59.4-5.02c7.25-.33,36-.88,59.08-4.53,15.05-2.38,26.82-7.3,31.64-10.11,12.21-7.12,36.92-39.84,36.92-39.84,0,0,18.55-21.8,21.33-31.64,2.78-9.84-.27-43.45-.27-43.45l-18.31-158.41v-41.21l2.75-139.19,7.32-140.62s2.35-26.19,6.86-56.45c5.5-36.92,13.48-80.07,15.3-91.25,2.97-18.31,11.69-38.64,20.12-55.05l-174.05-74.64c-2.64,8.18-5.74,17.08-9.23,25.96-12.37,31.47-30.03,61.01-30.03,61.01l-28.83-40.08Z" style="fill:none; stroke:#a6a6a6; stroke-miterlimit:10; stroke-width:1.5px;"/></g><g>
+                <path id="collar" d="M367.25,121.6l-17.04,23.69-28.83,40.08s-17.66-29.54-30.02-61.01c-3.46-8.8-6.54-17.61-9.17-25.73-6.77-20.91-10.61-37.28-10.61-37.28l27.71-46.88c-1.23,57.89,67.96,107.13,67.96,107.13Z" style="fill:none; stroke:#a6a6a6; stroke-miterlimit:10; stroke-width:1.5px;"/>
+                <path id="yoke" d="M375.95,121.55h-8.7s-69.19-49.24-67.96-107.13c0,0,2.08-6.27,24.77-10.54,18.71-3.53,40.43-3.23,47.47-3.01,.05,0,.1,0,.15,0,7.04-.22,28.76-.52,47.47,3.01,22.69,4.27,24.76,10.54,24.76,10.54,1.23,57.89-67.96,107.13-67.96,107.13Z" style="fill:none; stroke:#a6a6a6; stroke-miterlimit:10; stroke-width:1.5px;"/>
+                <path id="collar" d="M471.24,61.35s-7.41,31.55-19.77,63.01c-12.37,31.47-30.02,61.01-30.02,61.01l-28.84-40.09-17.04-23.68s69.19-49.24,67.96-107.13l27.71,46.88Z" style="fill:none; stroke:#a6a6a6; stroke-miterlimit:10; stroke-width:1.5px;"/></g>
+                <path id="right-shoulder" d="M653.19,140.58c-1.27,1.96-9.7,14.99-18.45,32.26l-173.96-74.27c6.77-20.93,10.62-37.31,10.62-37.31l181.79,79.32Z" style="fill:none; stroke:#a6a6a6; stroke-miterlimit:10; stroke-width:1.5px;"/>
+                <path id="left-shoulder" d="M89.38,140.58c1.27,1.96,9.7,14.99,18.45,32.26l173.96-74.27c-6.77-20.93-10.62-37.31-10.62-37.31L89.38,140.58Z" style="fill:none; stroke:#a6a6a6; stroke-miterlimit:10; stroke-width:1.5px;"/><path id="right-arm" d="M740.24,530.47s-.1,46.46-.91,66.01c-.82,19.55-5.73,176.96-5.73,176.96l-.38,60.08-99.59-.7,.1-.91s-9.66-68.16-10.71-102.89c-.35-11.8-7.23-195.08-7.23-195.08l-22.72-161.12h0c.74-7.64,2.97-29.27,6.58-53.53,5.5-36.92,13.49-80.07,15.3-91.25,6.33-39.04,38.83-87.23,38.83-87.23,0,0,36.22,101.75,49.49,161.15,15.8,70.74,30.7,170.79,35.6,204.88,1.13,7.82,1.58,15.73,1.37,23.63Z" style="fill:none; stroke:#a6a6a6; stroke-miterlimit:10; stroke-width:1.5px;"/>
+                <path id="right-cuff" d="M741.86,899.49s-30.06,5.02-35.85,5.89c-3.4,.52-11.15,1.51-16.95,2.25-4.74,.6-9.52,.66-14.27,.19l-48.21-4.77,7.31-70.12,99.59,.7,8.38,65.86Z" style="fill:none; stroke:#a6a6a6; stroke-miterlimit:10; stroke-width:1.5px;"/>
+                <path id="left-arm" d="M2.45,530.47s.1,46.46,.91,66.01c.82,19.55,5.73,176.96,5.73,176.96l.38,60.08,99.59-.7-.1-.91s9.66-68.16,10.71-102.89c.35-11.8,7.23-195.08,7.23-195.08l22.72-161.12h0c-.74-7.64-2.97-29.27-6.58-53.53-5.5-36.92-13.49-80.07-15.3-91.25-6.33-39.04-38.83-87.23-38.83-87.23,0,0-36.22,101.75-49.49,161.15C23.62,372.7,8.72,472.75,3.82,506.84c-1.13,7.82-1.58,15.73-1.37,23.63Z" style="fill:none; stroke:#a6a6a6; stroke-miterlimit:10; stroke-width:1.5px;"/>
+                <path id="left-cuff" d="M.84,899.49s30.06,5.02,35.85,5.89c3.4,.52,11.15,1.51,16.95,2.25,4.74,.6,9.52,.66,14.27,.19l48.21-4.77-7.31-70.12-99.59,.7L.84,899.49Z" style="fill:none; stroke:#a6a6a6; stroke-miterlimit:10; stroke-width:1.5px;"/>
+                <path id="placket" d="M392.87,989.75c-3.06,.62-15.58,3.14-19.87,3.48-4.69,.37-22.53-3.21-24.12-3.53,.57,.05,.87,.08,.87,.08l-.16-844.3,17.2-23.91h8.7l17.04,23.69V989.78s.12-.01,.34-.03Z" style="fill:none; stroke:#a6a6a6; stroke-miterlimit:10; stroke-width:1.5px;"/>
+            </svg>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="mt-6 grid grid-cols-2 gap-4 text-center mb-6">
+            <button data-target="collar" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Collar</button>
+            <button data-target="yoke" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Yoke</button>
+            <button data-target="left-chest" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Left Chest</button>
+            <button data-target="right-chest" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Right Chest</button>
+            <button data-target="left-arm" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Left Arm</button>
+            <button data-target="right-arm" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Right Arm</button>
+            <button data-target="left-shoulder" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Left Shoulder</button>
+            <button data-target="right-shoulder" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Right Shoulder</button>
+            <button data-target="left-cuff" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Left Cuff</button>
+            <button data-target="right-cuff" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Right Cuff</button>
+            <button data-target="placket" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Placket</button>
+        </div>
+    </div>
+
+    <script>
+        // Event listener for all buttons
+        document.querySelectorAll('button[data-target]').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+
+                // File picker for image upload
+                const input = document.createElement('input');
+                input.type = 'file';
+                input.accept = 'image/*';
+
+                input.onchange = (event) => {
+                    const file = event.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = () => {
+                            const svg = document.querySelector('#shirt');
+                            const targetElement = document.getElementById(targetId);
+
+                            if (svg && targetElement) {
+                                const imageURL = reader.result;
+
+                                // Ensure <defs> exists
+                                const defs = svg.querySelector('defs') || createDefs(svg);
+
+                                // Create or update pattern
+                                let pattern = document.getElementById(`pattern-${targetId}`);
+                                if (!pattern) {
+                                    pattern = document.createElementNS('http://www.w3.org/2000/svg', 'pattern');
+                                    pattern.setAttribute('id', `pattern-${targetId}`);
+                                    pattern.setAttribute('patternUnits', 'objectBoundingBox');
+                                    pattern.setAttribute('width', 1);
+                                    pattern.setAttribute('height', 1);
+                                    defs.appendChild(pattern);
+                                }
+
+                                // Add or update image in pattern
+                                let image = pattern.querySelector('image');
+                                if (!image) {
+                                    image = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+                                    pattern.appendChild(image);
+                                }
+
+                                image.setAttribute('href', imageURL);
+                                image.setAttribute('preserveAspectRatio', 'xMidYMid slice');
+                                image.setAttribute('width', '800');
+                                image.setAttribute('height', '1000');
+
+                                // Apply pattern to target element
+                                targetElement.style.fill = `url(#pattern-${targetId})`;
+                            }
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                };
+
+                input.click();
+            });
+        });
+
+        // Utility: Create <defs> if missing
+        function createDefs(svg) {
+            const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+            svg.insertBefore(defs, svg.firstChild);
+            return defs;
+        }
+    </script>
+</body>
+</html>
